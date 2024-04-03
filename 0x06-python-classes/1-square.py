@@ -7,5 +7,8 @@ class Square:
 
     def __init__(self, size):
 
-        """Initialization."""
-        self.__size = size  """A private instance of the class"""
+        """Initialization a new square
+
+        and a new instance of the class.
+        """
+        self.__size = size
