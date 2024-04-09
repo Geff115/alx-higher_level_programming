@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """A Rectangle class with width and
-height properties"""
+height properties.
+"""
 
 
 class Rectangle:
