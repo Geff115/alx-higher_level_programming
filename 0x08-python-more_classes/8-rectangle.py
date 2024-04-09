@@ -31,7 +31,7 @@ class Rectangle:
             raise TypeError("width must be an integer")
         if value < 0:
             raise ValueError("width must be >= 0")
-        self._width = width
+        self._width = value
 
     @property
     def height(self):
@@ -47,7 +47,7 @@ class Rectangle:
             raise TypeError("height must be an integer")
         if value < 0:
             raise ValueError("height must be >= 0")
-        self._height = height
+        self._height = value
 
     def area(self):
         """Area method"""
@@ -83,11 +83,13 @@ class Rectangle:
 
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
-    	if not isinstance(rect_1, Rectangle):
-        	raise TypeError("rect_1 must be an instance of Rectangle")
-    	if not isinstance(rect_2, Rectangle):
-        	raise TypeError("rect_2 must be an instance of Rectangle")
-    	if rect_1.area() >= rect_2.area():
-        	return rect_1
-    	else:
-        	return rect_2
+        """Static method"""
+
+        if not isinstance(rect_1, Rectangle):
+            raise TypeError("rect_1 must be an instance of Rectangle")
+        if not isinstance(rect_2, Rectangle):
+            raise TypeError("rect_2 must be an instance of Rectangle")
+        if rect_1.area() >= rect_2.area():
+            return (rect_1)
+        else:
+            return (rect_2)
