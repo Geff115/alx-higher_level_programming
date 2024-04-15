@@ -1,0 +1,9 @@
+>>> obj = BaseGeometry()
+>>> obj.integer_validator('test', 'not an integer')
+Traceback (most recent call last):
+...
+TypeError: test must be an integer
+>>> obj.integer_validator('test', -1)
+Traceback (most recent call last):
+...
+ValueError: test must be greater than 0
