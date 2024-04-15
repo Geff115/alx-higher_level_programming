@@ -5,4 +5,6 @@ instance of a class it inherits from directly or indirectly.
 
 
 def inherits_from(obj, a_class):
+    """This is a function"""
+
     return (issubclass(type(obj), a_class) and type(obj) != a_class)
