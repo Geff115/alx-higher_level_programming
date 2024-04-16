@@ -4,13 +4,6 @@ BaseGeometry class.
 """
 
 
-import importlib
-"""Importing importlib because my filename starts with a number"""
-
-BaseGeometry = importlib.import_module("7-base_geometry").BaseGeometry
-"""File imported to have access to the parent class"""
-
-
 class Rectangle(BaseGeometry):
     """This is a child class"""
 
