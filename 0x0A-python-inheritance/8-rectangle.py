@@ -4,9 +4,23 @@ a parent class BaseGeometry.
 """
 
 
-import importlib
+class BaseGeometry:
+    """A BaseGeometry class"""
 
-BaseGeometry = importlib.import_module("7-base_geometry").BaseGeometry
+    def area(self):
+        """Area method"""
+
+        raise Exception("area() is not implemented")
+
+    def integer_validator(self, name, value):
+        """Validates name to be a positive integer
+        otherwise raise an error.
+        """
+
+        if not isinstance(value, int):
+            raise TypeError(f"{name} must be an integer")
+        if value <= 0:
+            raise ValueError(f"{name} must be greater than 0")
 
 
 class Rectangle(BaseGeometry):
