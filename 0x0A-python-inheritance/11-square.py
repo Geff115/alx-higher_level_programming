@@ -61,3 +61,8 @@ class Square(Rectangle):
         """Area method"""
 
         return (self.__size ** 2)
+
+    def __str__(self):
+        """String representation method"""
+
+        return ("[Square] {}/{}".format(self.__size, self.__size))
