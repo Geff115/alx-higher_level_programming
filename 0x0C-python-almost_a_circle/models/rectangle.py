@@ -136,10 +136,10 @@ class Rectangle(Base):
     def display(self):
         """Display method that prints the rectangle instance #"""
 
-        for _ in range(self.__height):
-            for _ in range(self.__width):
-                print("#", end="")
+        for _ in range(self.__y):
             print()
+        for _ in range(self.__height):
+            print(' ' * self.__x + '#' * self.__width)
 
     def __str__(self):
         """String representation method"""
