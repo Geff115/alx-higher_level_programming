@@ -145,3 +145,10 @@ class Rectangle(Base):
         """String representation method"""
 
         return (f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}")
+
+    def update(self, *args):
+        """This method handles variable number of arguments"""
+
+        attributes = ['id', '__width', '__height', '__x', '__y']
+        for attribute, value in zip(attributes, args):
+            setattr(self, attribute, value)
