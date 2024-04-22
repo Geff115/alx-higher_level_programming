@@ -146,9 +146,15 @@ class Rectangle(Base):
 
         return (f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}")
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """This method handles variable number of arguments"""
 
         attributes = ['id', '__width', '__height', '__x', '__y']
-        for attribute, value in zip(attributes, args):
-            setattr(self, attribute, value)
+        if args:
+            for attribute, value in zip(attributes, args):
+                setattr(self, attribute, value)
+
+        elif kwargs:
+            for key, value in kwargs.items():
+                if key in attributes:
+                    setattr(self, key, value)
