@@ -4,6 +4,9 @@ attribute and init method.
 """
 
 
+import json
+
+
 class Base:
     """This is a class."""
 
@@ -18,3 +21,13 @@ class Base:
 
         else:
             self.id = id
+
+    @staticmethod
+    def to_json_string(list_dictionaries):
+        """Converts a Python object to JSON string"""
+
+        if not list_dictionaries:
+            return ("[]")
+
+        else:
+            return (json.dumps(list_dictionaries))
