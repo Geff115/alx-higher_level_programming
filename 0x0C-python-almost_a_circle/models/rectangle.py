@@ -88,7 +88,7 @@ class Rectangle(Base):
             raise ValueError("value must be > 0")
 
         else:
-            self.__heigh = value
+            self.__height = value
 
     @property
     def x(self):
