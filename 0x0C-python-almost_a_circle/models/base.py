@@ -5,6 +5,7 @@ attribute and init method.
 
 
 import json
+import os
 
 
 class Base:
@@ -31,3 +32,21 @@ class Base:
 
         else:
             return (json.dumps(list_dictionaries))
+
+    @classmethod
+    def save_to_file(cls, list_objs):
+        """Writes the JSON string representation
+        into a file.
+        """
+
+        if list_objs is None:
+            list_objs = []
+        list_dicts = [obj.to_dictionary() for obj in list_objs]
+        json_str = cls.to_json_string(list_dicts)
+        if os.path.exists(cls.__name__ + '.json'):
+            with open(cls.__name__ + '.json', mode='r') as file:
+                data = file.read()
+                return (json.loads(data))
+        else:
+            with open(cls.__name__ + '.json', mode='w') as file:
+                file.write(json_str)
