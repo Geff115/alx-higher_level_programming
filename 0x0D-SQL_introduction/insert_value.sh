@@ -12,4 +12,6 @@ DATABASE_NAME=$1
 read -sp "Enter MySQL password: " PASSWORD
 echo
 
-echo "INSERT INTO first_table (id, name) VALUES (89, 'Best School');" | mysql -hlocalhost -uroot -p"$PASSWORD" "$DATABASE_NAME"
+cat 7-insert_value.sql | mysql -hlocalhost -uroot -p"$PASSWORD" "$DATABASE_NAME"
+
+cat 6-list_values.sql | mysql -hlocalhost -uroot -p"$PASSWORD" "$DATABASE_NAME"
