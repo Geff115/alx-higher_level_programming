@@ -4,4 +4,6 @@
 read -sp "Enter MySQL password: " PASSWORD
 echo
 
-echo "CREATE DATABASE IF NOT EXISTS hbtn_0c_0;" | mysql -hlocalhost -uroot -p"$PASSWORD"
+cat "CREATE DATABASE IF NOT EXISTS hbtn_0c_0;" | mysql -hlocalhost -uroot -p"$PASSWORD"
+
+cat 0-list_databases.sql | mysql -hlocalhost -uroot -p"$PASSWORD"
