@@ -12,8 +12,4 @@ DATABASE_NAME=$1
 read -sp "Enter MySQL password: " PASSWORD
 echo
 
-echo "
-SELECT COLUMN_NAME, COLUMN_TYPE, IS_NULLABLE, COLUMN_KEY, COLUMN_DEFAULT, EXTRA
-FROM information_schema.COLUMNS
-WHERE TABLE_SCHEMA = '$DATABASE_NAME' AND TABLE_NAME = 'first_table';
-" | mysql -hlocalhost -uroot -p"$PASSWORD" "$DATABASE_NAME"
+echo "SHOW CREATE TABLE first_table;" | mysql -hlocalhost -uroot -p"$PASSWORD" "$DATABASE_NAME"
