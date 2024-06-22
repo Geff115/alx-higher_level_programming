@@ -1,62 +1,19 @@
 #!/usr/bin/node
 
-/*
- * This is a Square class.
- * This class inherits from a Rectangle class.
- * Created a method called charprint(c) that prints the rectangle using
- * the character c.
- */
+// This is a Square inherits from a Sqyare class
+// in a file 5-square.js.
 
-class Rectangle {
-  constructor (w, h) {
-    if (w > 0 && h > 0 && typeof w === 'number' && typeof h === 'number') {
-      this.width = w;
-      this.height = h;
-    }
-  }
-
-  print () {
-    if (this.width === undefined && this.height === undefined) {
-      return;
-    }
-    for (let i = 0; i < this.height; i++) {
-      let row = '';
-      for (let j = 0; j < this.width; j++) {
-        row += 'X';
-      }
-      console.log(row);
-    }
-  }
-
-  rotate () {
-    const temp = this.width;
-    this.width = this.height;
-    this.height = temp;
-  }
-
-  double () {
-    this.width = this.width * 2;
-    this.height = this.height * 2;
-  }
-}
-
-class Square extends Rectangle {
-  constructor (size) {
-    super(size, size);
-  }
-}
-
-class NewSquare extends Square {
+const square = require('./5-square.js');
+class Square extends square {
   charPrint (c) {
-    if (c === undefined) {
-      c = 'X';
-    }
     for (let i = 0; i < this.width; i++) {
-      console.log(c.repeat(this.width));
+      if (c === undefined) {
+        console.log('X'.repeat(this.height));
+      } else {
+        console.log(c.repeat(this.height));
+      }
     }
   }
 }
 
-exports.Rectangle = Rectangle;
-exports.Square = Square;
-exports.NewSquare = NewSquare;
+module.export = Square;
