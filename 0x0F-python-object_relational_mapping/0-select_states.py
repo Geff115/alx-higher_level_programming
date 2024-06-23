@@ -1,15 +1,13 @@
-#!/usr/bin/env python3
-
-"""List all states frm the database hbtn_0e_0_usa."""
+#!/usr/bin/python3
+""" list states """
 
 import MySQLdb
 import sys
 
 
 def main():
-    """This is the main function that creates a connection with
-    the database hbtn_0e_0_usa and lists all states.
-    """
+    """This function selects all states from the database"""
+
 
     db = MySQLdb.connect(
           user=sys.argv[1],
