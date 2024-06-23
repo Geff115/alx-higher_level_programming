@@ -8,7 +8,6 @@ import sys
 def main():
     """This function selects all states from the database"""
 
-
     db = MySQLdb.connect(
           user=sys.argv[1],
           host="localhost",
