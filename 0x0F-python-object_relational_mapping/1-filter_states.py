@@ -5,7 +5,7 @@ import MySQLdb
 import sys
 
 
-def main():
+def list_states_with_N():
     """This function selects all states order by
     states id.
     """
@@ -28,4 +28,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    list_states_with_N()
