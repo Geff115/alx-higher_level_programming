@@ -3,4 +3,6 @@
  * using jQuery api: https://code.jquery.com/jquery-3.2.1.min.js
  */
 
-$("header").css("color", "#FF0000");
+/* global $ */
+
+$('header').css('color', '#FF0000');
